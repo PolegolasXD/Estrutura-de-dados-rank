@@ -167,10 +167,10 @@ public class Cadastrar extends javax.swing.JFrame {
                 .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(jbLogar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(516, 468));
+        setSize(new java.awt.Dimension(516, 494));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
