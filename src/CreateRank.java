@@ -1,24 +1,25 @@
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import modelo.ListaRank;
-
-
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author aluno
  */
-public class Ranking extends javax.swing.JFrame {
+public class CreateRank extends javax.swing.JFrame {
 
-    
-    public Ranking() {
+    public CreateRank() {
         initComponents();
-        
+
+    }
+
+    private void campoVazio() {
+        JOptionPane.showMessageDialog(null, "Existe um campo ", "Aviso", JOptionPane.WARNING_MESSAGE);
     }
 
     /**
@@ -30,33 +31,20 @@ public class Ranking extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         campoRankUm = new javax.swing.JTextField();
         campoRankDois = new javax.swing.JTextField();
         campoRankTres = new javax.swing.JTextField();
         campoRankTitulo = new javax.swing.JTextField();
+        voltarHome = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         setSize(new java.awt.Dimension(472, 514));
-
-        jLabel2.setFont(new java.awt.Font("Yu Gothic UI", 2, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText("Escolha Um");
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 2, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setText("Escolha Dois");
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        jLabel4.setFont(new java.awt.Font("Yu Gothic UI", 2, 14)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("Escolha Três");
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jButton1.setFont(new java.awt.Font("Yu Gothic UI", 2, 18)); // NOI18N
         jButton1.setText("Criar");
@@ -68,7 +56,6 @@ public class Ranking extends javax.swing.JFrame {
 
         campoRankUm.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         campoRankUm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campoRankUm.setText("Exemplo");
         campoRankUm.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 campoRankUmFocusGained(evt);
@@ -85,7 +72,6 @@ public class Ranking extends javax.swing.JFrame {
 
         campoRankDois.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         campoRankDois.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campoRankDois.setText("Exemplo");
         campoRankDois.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 campoRankDoisFocusGained(evt);
@@ -102,7 +88,6 @@ public class Ranking extends javax.swing.JFrame {
 
         campoRankTres.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         campoRankTres.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campoRankTres.setText("Exemplo");
         campoRankTres.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 campoRankTresFocusGained(evt);
@@ -117,10 +102,9 @@ public class Ranking extends javax.swing.JFrame {
             }
         });
 
-        campoRankTitulo.setBackground(new java.awt.Color(242, 242, 242));
-        campoRankTitulo.setFont(new java.awt.Font("Yu Gothic UI", 2, 36)); // NOI18N
+        campoRankTitulo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         campoRankTitulo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campoRankTitulo.setText("Título");
+        campoRankTitulo.setPreferredSize(new java.awt.Dimension(64, 41));
         campoRankTitulo.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 campoRankTituloFocusGained(evt);
@@ -135,50 +119,79 @@ public class Ranking extends javax.swing.JFrame {
             }
         });
 
+        voltarHome.setFont(new java.awt.Font("Yu Gothic UI", 2, 18)); // NOI18N
+        voltarHome.setText("Voltar");
+        voltarHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarHomeActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setText("Titulo Rank");
+
+        jLabel2.setText("Elemento 1");
+
+        jLabel3.setText("Elemento 2");
+
+        jLabel4.setText("Elemento 3");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(campoRankUm, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoRankDois, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoRankTres, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(200, 200, 200))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(210, 210, 210)
+                .addContainerGap(53, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addContainerGap(210, Short.MAX_VALUE))
-            .addComponent(campoRankTitulo)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                                .addComponent(voltarHome, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(campoRankTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(campoRankUm)
+                            .addComponent(campoRankDois)
+                            .addComponent(campoRankTres))
+                        .addGap(53, 53, 53))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(219, 219, 219))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(222, 222, 222))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(224, 224, 224))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(216, 216, 216)
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(7, 7, 7)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addComponent(campoRankTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campoRankUm, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(28, 28, 28)
                 .addComponent(campoRankDois, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
-                .addGap(18, 18, 18)
+                .addGap(19, 19, 19)
                 .addComponent(campoRankTres, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(50, 50, 50))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(voltarHome))
+                .addGap(22, 22, 22))
         );
 
         setSize(new java.awt.Dimension(516, 468));
@@ -194,20 +207,24 @@ public class Ranking extends javax.swing.JFrame {
     }//GEN-LAST:event_campoRankTresActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
         String campoRankTitulo = this.campoRankTitulo.getText();
         String campoRankUm = this.campoRankUm.getText();
         String campoRankDois = this.campoRankDois.getText();
         String campoRankTres = this.campoRankTres.getText();
-        
+
         ListaRank.setRank(campoRankUm, campoRankDois, campoRankTres);
         ListaRank.setTitulo(campoRankTitulo);
-        
-        Ranking.this.dispose();
-        
-        new TelaVoto().setVisible(true);
-       
-       
+
+        if (this.campoRankUm.getText().isEmpty() || this.campoRankDois.getText().isEmpty() || this.campoRankTres.getText().isEmpty() || this.campoRankTitulo.getText().isEmpty()) {
+            campoVazio();
+
+        } else {
+            CreateRank.this.dispose();
+
+            new TelaVoto().setVisible(true);
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void campoRankTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoRankTituloActionPerformed
@@ -218,61 +235,66 @@ public class Ranking extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoRankUmActionPerformed
 
+
     private void campoRankTituloFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoRankTituloFocusGained
-         if(campoRankTitulo.getText().equals("Título")){
+        if (campoRankTitulo.getText().equals("")) {
             campoRankTitulo.setText("");
-            campoRankTitulo.setForeground(new Color(0,0,0));
+            campoRankTitulo.setForeground(new Color(0, 0, 0));
         }
     }//GEN-LAST:event_campoRankTituloFocusGained
 
     private void campoRankTituloFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoRankTituloFocusLost
-         if(campoRankTitulo.getText().equals("")){
-            campoRankTitulo.setText("Título");
-            campoRankTitulo.setForeground(new Color(51,51,51));
+        if (campoRankTitulo.getText().equals("")) {
+            campoRankTitulo.setText("");
+            campoRankTitulo.setForeground(new Color(51, 51, 51));
         }
     }//GEN-LAST:event_campoRankTituloFocusLost
 
     private void campoRankUmFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoRankUmFocusGained
-          if(campoRankUm.getText().equals("Exemplo")){
+        if (campoRankUm.getText().equals("")) {
             campoRankUm.setText("");
-            campoRankUm.setForeground(new Color(0,0,0));
+            campoRankUm.setForeground(new Color(0, 0, 0));
         }
     }//GEN-LAST:event_campoRankUmFocusGained
 
     private void campoRankUmFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoRankUmFocusLost
-         if(campoRankUm.getText().equals("")){
-            campoRankUm.setText("Exemplo");
-            campoRankUm.setForeground(new Color(51,51,51));
+        if (campoRankUm.getText().equals("")) {
+            campoRankUm.setText("");
+            campoRankUm.setForeground(new Color(51, 51, 51));
         }
     }//GEN-LAST:event_campoRankUmFocusLost
 
     private void campoRankDoisFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoRankDoisFocusGained
-          if(campoRankDois.getText().equals("Exemplo")){
+        if (campoRankDois.getText().equals("")) {
             campoRankDois.setText("");
-            campoRankDois.setForeground(new Color(0,0,0));
+            campoRankDois.setForeground(new Color(0, 0, 0));
         }
     }//GEN-LAST:event_campoRankDoisFocusGained
 
     private void campoRankDoisFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoRankDoisFocusLost
-         if(campoRankDois.getText().equals("")){
-            campoRankDois.setText("Exemplo");
-            campoRankDois.setForeground(new Color(51,51,51));
+        if (campoRankDois.getText().equals("")) {
+            campoRankDois.setText("");
+            campoRankDois.setForeground(new Color(51, 51, 51));
         }
     }//GEN-LAST:event_campoRankDoisFocusLost
 
     private void campoRankTresFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoRankTresFocusGained
-         if(campoRankTres.getText().equals("Exemplo")){
+        if (campoRankTres.getText().equals("")) {
             campoRankTres.setText("");
-            campoRankTres.setForeground(new Color(0,0,0));
+            campoRankTres.setForeground(new Color(0, 0, 0));
         }
     }//GEN-LAST:event_campoRankTresFocusGained
 
     private void campoRankTresFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_campoRankTresFocusLost
-         if(campoRankTres.getText().equals("")){
-            campoRankTres.setText("Exemplo");
-            campoRankTres.setForeground(new Color(51,51,51));
+        if (campoRankTres.getText().equals("")) {
+            campoRankTres.setText("");
+            campoRankTres.setForeground(new Color(51, 51, 51));
         }
     }//GEN-LAST:event_campoRankTresFocusLost
+
+    private void voltarHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarHomeActionPerformed
+        new Logado().setVisible(true);
+    }//GEN-LAST:event_voltarHomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,21 +313,23 @@ public class Ranking extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Ranking.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CreateRank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Ranking.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CreateRank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Ranking.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CreateRank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Ranking.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CreateRank.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Ranking().setVisible(true);
+                new CreateRank().setVisible(true);
             }
         });
     }
@@ -316,8 +340,10 @@ public class Ranking extends javax.swing.JFrame {
     private javax.swing.JTextField campoRankTres;
     private javax.swing.JTextField campoRankUm;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton voltarHome;
     // End of variables declaration//GEN-END:variables
 }

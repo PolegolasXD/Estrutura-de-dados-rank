@@ -2,6 +2,7 @@
 import java.awt.Color;
 import modelo.Usuario;
 
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -175,18 +176,18 @@ public class Cadastrar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomeActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jtfNomeActionPerformed
 
     private void jbLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLogarActionPerformed
         abrirLogin();
         Cadastrar.this.dispose();
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jbLogarActionPerformed
 
     private void jbCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarActionPerformed
         usuario.cadastrarUsuario(jtfNome.getText(),jtfEmail.getText(), jtfSenha.getText(),jtfConSenha.getText());
-         
+        
     }//GEN-LAST:event_jbCadastrarActionPerformed
 
     private void jtfNomeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfNomeFocusGained

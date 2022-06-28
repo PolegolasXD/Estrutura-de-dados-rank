@@ -27,7 +27,6 @@ public class ResultadoRank extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tituloResultadoRank = new javax.swing.JLabel();
         votosPosicaoUm = new javax.swing.JLabel();
         votosPosicaoDois = new javax.swing.JLabel();
         votosPosicaoTres = new javax.swing.JLabel();
@@ -36,16 +35,12 @@ public class ResultadoRank extends javax.swing.JFrame {
         primeiraPosicao = new javax.swing.JLabel();
         segundaPosicao = new javax.swing.JLabel();
         terceiraPosicao = new javax.swing.JLabel();
+        tituloResultadoRank = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Overview Rank");
-        setPreferredSize(new java.awt.Dimension(500, 460));
         setSize(new java.awt.Dimension(500, 460));
-
-        tituloResultadoRank.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        tituloResultadoRank.setText("AAAAAAAAAAAAAA");
-        tituloResultadoRank.setMaximumSize(new java.awt.Dimension(332, 30));
-        tituloResultadoRank.setMinimumSize(new java.awt.Dimension(332, 30));
 
         votosPosicaoUm.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         votosPosicaoUm.setText("00");
@@ -56,7 +51,7 @@ public class ResultadoRank extends javax.swing.JFrame {
         votosPosicaoTres.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         votosPosicaoTres.setText("00");
 
-        criarNovoRank.setText("Criar novo Rank");
+        criarNovoRank.setText("Novo Rank");
         criarNovoRank.setPreferredSize(new java.awt.Dimension(180, 40));
         criarNovoRank.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,7 +59,7 @@ public class ResultadoRank extends javax.swing.JFrame {
             }
         });
 
-        votarNovamente.setText("Votar novamente");
+        votarNovamente.setText("Votação");
         votarNovamente.setPreferredSize(new java.awt.Dimension(180, 40));
         votarNovamente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,37 +74,52 @@ public class ResultadoRank extends javax.swing.JFrame {
 
         terceiraPosicao.setText("AAAAAAAAAAAAAAAAAAA");
 
+        tituloResultadoRank.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 24)); // NOI18N
+        tituloResultadoRank.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tituloResultadoRank.setText("jLabel1");
+        tituloResultadoRank.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jButton1.setText("Voltar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(terceiraPosicao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(segundaPosicao, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(primeiraPosicao, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(votosPosicaoUm)
-                    .addComponent(votosPosicaoDois)
-                    .addComponent(votosPosicaoTres))
-                .addContainerGap(87, Short.MAX_VALUE))
             .addComponent(tituloResultadoRank, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
-                .addComponent(criarNovoRank, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(votarNovamente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(terceiraPosicao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(segundaPosicao, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(primeiraPosicao, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(53, 53, 53)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(votosPosicaoUm)
+                            .addComponent(votosPosicaoDois)
+                            .addComponent(votosPosicaoTres)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(criarNovoRank, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(votarNovamente, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(tituloResultadoRank, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+                .addGap(19, 19, 19)
+                .addComponent(tituloResultadoRank, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(primeiraPosicao, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(votosPosicaoUm))
@@ -121,11 +131,14 @@ public class ResultadoRank extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(terceiraPosicao, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(votosPosicaoTres))
-                .addGap(38, 38, 38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(criarNovoRank, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(votarNovamente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(101, Short.MAX_VALUE))
+                    .addComponent(votarNovamente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addComponent(criarNovoRank, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8))
         );
 
         setSize(new java.awt.Dimension(500, 440));
@@ -133,7 +146,7 @@ public class ResultadoRank extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void criarNovoRankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criarNovoRankActionPerformed
-        new Ranking().setVisible(true);
+        new CreateRank().setVisible(true);
         ResultadoRank.this.dispose();
     }//GEN-LAST:event_criarNovoRankActionPerformed
 
@@ -141,6 +154,10 @@ public class ResultadoRank extends javax.swing.JFrame {
         new TelaVoto().setVisible(true);
         ResultadoRank.this.dispose();
     }//GEN-LAST:event_votarNovamenteActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new Logado().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
     private void popularCampos() {
@@ -195,6 +212,7 @@ public class ResultadoRank extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton criarNovoRank;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel primeiraPosicao;
     private javax.swing.JLabel segundaPosicao;
     private javax.swing.JLabel terceiraPosicao;
