@@ -33,7 +33,6 @@ public class Logado extends javax.swing.JFrame {
     private void initComponents() {
 
         nomeLabel = new javax.swing.JLabel();
-        rankButton = new javax.swing.JButton();
         amigosButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
 
@@ -44,13 +43,6 @@ public class Logado extends javax.swing.JFrame {
         nomeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         nomeLabel.setText("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         nomeLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        rankButton.setText("Amigos");
-        rankButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rankButtonActionPerformed(evt);
-            }
-        });
 
         amigosButton.setText("Criar Rank");
         amigosButton.addActionListener(new java.awt.event.ActionListener() {
@@ -70,27 +62,24 @@ public class Logado extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(nomeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(nomeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(187, 187, 187)
+                .addGap(185, 185, 185)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(sairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(amigosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rankButton, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(188, Short.MAX_VALUE))
+                    .addComponent(amigosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(nomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
-                .addComponent(rankButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(66, 66, 66)
                 .addComponent(amigosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(60, 60, 60)
                 .addComponent(sairButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(191, Short.MAX_VALUE))
         );
 
         pack();
@@ -107,10 +96,6 @@ public class Logado extends javax.swing.JFrame {
         Logado.this.dispose();
 
     }//GEN-LAST:event_sairButtonActionPerformed
-
-    private void rankButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rankButtonActionPerformed
-
-    }//GEN-LAST:event_rankButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,7 +135,6 @@ public class Logado extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton amigosButton;
     private javax.swing.JLabel nomeLabel;
-    private javax.swing.JButton rankButton;
     private javax.swing.JButton sairButton;
     // End of variables declaration//GEN-END:variables
 }
