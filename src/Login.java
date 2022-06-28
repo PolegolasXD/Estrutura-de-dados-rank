@@ -1,33 +1,38 @@
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Arrays;
 import modelo.Usuario;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author aluno
  */
 public class Login extends javax.swing.JFrame {
+
     private Usuario usuario = new Usuario();
+
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
-        
+
     }
-    
-    private void abrirRank(){
-        new Ranking().setVisible(true);
-            dispose();
+
+    private void abrirRank() {
+        new CreateRank().setVisible(true);
+        dispose();
     }
-    private void chamarCadastro(){
-          new Cadastrar().setVisible(true);
-            dispose();
+
+    private void chamarCadastro() {
+        new Cadastrar().setVisible(true);
+        dispose();
     }
 
     /**
@@ -51,7 +56,7 @@ public class Login extends javax.swing.JFrame {
         setResizable(false);
 
         jtfEmail.setFont(new java.awt.Font("Yu Gothic UI", 2, 14)); // NOI18N
-        jtfEmail.setText("Email");
+        jtfEmail.setText("Nome");
         jtfEmail.setToolTipText("");
         jtfEmail.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jtfEmail.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -136,9 +141,9 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jtfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jtfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addComponent(jbEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
@@ -147,39 +152,40 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     private void jtfEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfEmailActionPerformed
-    
-    // TODO add your handling code here:
+
+        // TODO add your handling code here:
     }//GEN-LAST:event_jtfEmailActionPerformed
 
     private void jtfEmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfEmailMouseClicked
-      // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jtfEmailMouseClicked
 
     private void jbCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarActionPerformed
-    chamarCadastro();
+        chamarCadastro();
         Login.this.dispose();
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jbCadastrarActionPerformed
 
     private void jtfEmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfEmailFocusLost
-            if(jtfEmail.getText().equals("")){
-                jtfEmail.setText("Email");
-                jtfEmail.setForeground(new Color(51,51,51));
-            }
+        if (jtfEmail.getText().equals("")) {
+            jtfEmail.setText("Nome");
+            jtfEmail.setForeground(new Color(51, 51, 51));
+        }
     }//GEN-LAST:event_jtfEmailFocusLost
 
     private void jtfEmailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfEmailFocusGained
-            if(jtfEmail.getText().equals("Email")){
-                jtfEmail.setText("");
-                jtfEmail.setForeground(new Color(0,0,0));
-            }
+        if (jtfEmail.getText().equals("Nome")) {
+            jtfEmail.setText("");
+            jtfEmail.setForeground(new Color(0, 0, 0));
+        }
     }//GEN-LAST:event_jtfEmailFocusGained
 
     private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
-        if(usuario.logar(jtfEmail.getText(),jtfSenha.getText()))
-           abrirRank();
-        // TODO add your handling code here:
+        if (usuario.logar(jtfEmail.getText(), jtfSenha.getText())) {
+            new Logado().setVisible(true);
+        }
+
     }//GEN-LAST:event_jbEntrarActionPerformed
 
     private void jtfSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSenhaActionPerformed
@@ -187,16 +193,16 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfSenhaActionPerformed
 
     private void jtfSenhaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfSenhaFocusGained
-        if(jtfSenha.getText().equals("********")){
+        if (jtfSenha.getText().equals("********")) {
             jtfSenha.setText("");
-            jtfSenha.setForeground(new Color(0,0,0));
+            jtfSenha.setForeground(new Color(0, 0, 0));
         }
     }//GEN-LAST:event_jtfSenhaFocusGained
 
     private void jtfSenhaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfSenhaFocusLost
-         if(jtfSenha.getText().equals("")){
+        if (jtfSenha.getText().equals("")) {
             jtfSenha.setText("********");
-            jtfSenha.setForeground(new Color(51,51,51));
+            jtfSenha.setForeground(new Color(51, 51, 51));
         }
     }//GEN-LAST:event_jtfSenhaFocusLost
 
@@ -230,7 +236,7 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
             new Login().setVisible(true);
-            
+
         });
     }
 
